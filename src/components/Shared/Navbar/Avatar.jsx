@@ -8,6 +8,7 @@ const Avatar = () => {
 		<div>
 			<img
 				className="rounded-full"
+				referrerPolicy="no-referrer"
 				src={user && user.photoURL ? user.photoURL : avatarImg}
 				alt="profile"
 				width={30}

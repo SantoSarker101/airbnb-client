@@ -43,22 +43,22 @@ const RoomReservation = ({roomData}) => {
 		setValue({ ...value })
 	}
 
-	const modalHandler = () => {
-		addBooking(bookingInfo)
-		.then(data => {
-			console.log(data)
-			updateStatus(roomData._id, true)
-			.then(data => {
-				console.log(data);
-				toast.success('Booking Successfull')
-				navigate('/dashboard/my-bookings')
-				closeModal()
-			})
-			.catch(err => console.log(err))
-		})
-		.catch(err => console.log(err))
-		// console.log(bookingInfo);
-	}
+	// const modalHandler = () => {
+	// 	addBooking(bookingInfo)
+	// 	.then(data => {
+	// 		console.log(data)
+	// 		updateStatus(roomData._id, true)
+	// 		.then(data => {
+	// 			console.log(data);
+	// 			toast.success('Booking Successfull')
+	// 			navigate('/dashboard/my-bookings')
+	// 			closeModal()
+	// 		})
+	// 		.catch(err => console.log(err))
+	// 	})
+	// 	.catch(err => console.log(err))
+	// 	// console.log(bookingInfo);
+	// }
 
 	console.log(bookingInfo);
 
@@ -90,7 +90,7 @@ const RoomReservation = ({roomData}) => {
 				<div>$ {totalPrice}</div>
 			</div>
 
-			<BookingModal modalHandler={modalHandler} bookingInfo={bookingInfo} isOpen={isOpen} closeModal={closeModal}></BookingModal>
+			<BookingModal bookingInfo={bookingInfo} isOpen={isOpen} closeModal={closeModal}></BookingModal>
 
 
 		</div>

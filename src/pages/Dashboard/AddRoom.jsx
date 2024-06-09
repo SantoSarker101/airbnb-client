@@ -14,7 +14,7 @@ const AddRoom = () => {
 		key: 'selection',
 	  })
 	const [loading, setLoading] = useState(false);
-	const [uploadButtonText, setUploadButtonText] = useState('Chobi Dao to Kaka')
+	const [uploadButtonText, setUploadButtonText] = useState('Image Upload')
 	const navigate = useNavigate()
 
 	// handle form submit
